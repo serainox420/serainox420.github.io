@@ -1,0 +1,35 @@
+/* Place your CSS styles in this file */
+
+h1 {
+    text-align: match-parent;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+}
+/* Style buttons */
+.btn {
+  background-color: rgb(0, 106, 228);
+  border: <99>||<normal>||<black>;
+  color: rgb(6, 0, 0);
+  padding: 15px 25px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: rgb(62, 0, 87);
+}
+
+body {
+  padding: 5px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+X
