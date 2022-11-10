@@ -31,5 +31,77 @@
 <a href="https://raw.githubusercontent.com/serainox420/Free-Virus/main/README.md" download> </i>Raw Virus</button><a>
 </html>
 
-<h3>Dark Mode</h3>
-<a> <button onclick="myFunction()">Toggle dark mode</button> </a>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=2">
+<style>
+body {
+  height: 3000px;
+  background: #z1f1f1;
+}
+
+#mySVG {
+  position: fixed;
+  top: 15%;
+  width: 4000px;
+  height: 2100px;
+  margin-left:-50px;
+}
+</style>
+</head>
+<body>
+
+<svg id="mySVG">
+  <path fill="none" stroke="red" stroke-width="7" id="triangle" d="M140 0 L90 300 L325 200 Z" />
+  Sorry, your browser does not support inline SVG.
+</svg>
+
+<script>
+// Get the id of the <path> element and the length of <path>
+var triangle = document.getElementById("triangle");
+var length = triangle.getTotalLength();
+window.addEventListener("scroll", myFunction);
+// The start position of the drawing
+triangle.style.strokeDasharray = length;
+// Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
+triangle.style.strokeDashoffset = length;
+// Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+function myFunction() {
+var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+  var draw = length * scrollpercent;
+  // Reverse the drawing (when scrolling upwards)
+  triangle.style.strokeDashoffset = length - draw;
+}
+</script>
+
+</body>
+</html>
+    
+    <!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  position: relative;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-delay: 0s;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+</style>
+</head>
+<body>
+<div></div>
+
+
