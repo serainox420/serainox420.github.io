@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Page Title</title>
-  <script>
-    function redirect() {
-        window.location.replace('https://serainox420.github.io/main');
+  <head>
+    <title>Entry Point</title>
+    <style>
+      /* Center the button */
+      body {
+      	background-color: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
       }
-    setTimeout(function() {
-      document.getElementById('redirectBtn').click();
-    }, 666);
-  </script>
-</head>
-<body>
-  <h1>This is a Heading</h1>
-  <p>This is a paragraph.</p>
-  <button id="redirectBtn" onclick="redirect()">E</button>
-</body>
+      /* Style the button */
+      #redirect-button {
+        background-color: white;
+        border: none;
+        color: black;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 69px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Scale the button on hover */
+      #redirect-button:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <button id="redirect-button">[ENTER]</button>
+    <script>
+      // Redirect to https://serainox420.github.io/main when button is clicked
+      document.getElementById("redirect-button").addEventListener("click", function() {
+        window.location.href = "https://serainox420.github.io/main";
+      });
+    </script>
+  </body>
 </html>
