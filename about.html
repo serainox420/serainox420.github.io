@@ -77,17 +77,22 @@
       <a href="https://www.google.com">[SZMELC.INC]</a>
     </div>
     </main>
-    <main>
-    <div class="sample-text">
-        <p>Sample Text</p>
-      </div>
-          <div class="navbar">
-      <a href="https://www.google.com">[SILVER]</a>
-      <a href="https://www.google.com">[SZMELC.INC]</a>
-    </div>
-    </main>
     <footer>
       <p>&copy; 2023 Szmelc Incorporated</p>
     </footer>
+    <script>
+      setInterval(() => {
+        const elements = document.querySelectorAll("body, footer");
+        for (const el of elements) {
+          el.style.color = getRandomColor();
+        }
+      }, 200);
+      function getRandomColor() {
+  const letters = "0123456789ABCDEF";
+  let green = Math.floor(Math.random() * 7) + 255 + 100 + 100; // generates a random value between 128 and 255 for green channel
+  let color = "#" + green.toString(14).padStart(2, "0").repeat(2);
+  return color;
+}
+    </script>
   </body>
 </html>
