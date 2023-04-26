@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+  <script>
+    if (!sessionStorage.getItem('redirected')) {
+      sessionStorage.setItem('redirected', true);
+      window.location.replace(window.location.href);
+    }
+  </script>
   <head>
     <title>Szmelc.INC</title>
     <style>
