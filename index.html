@@ -1,46 +1,77 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Entry Point</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=3">
+    <title>CAPTCHA</title>
     <style>
-      /* Center the button */
       body {
-      	background-color: #000000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
+        background-color: #000000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0 auto;
+        max-width: 120%;
       }
-      /* Style the button */
-      #redirect-button {
-        background-color: white;
-        border: none;
-        color: black;
+      header {
+        background-image: url("https://i.imgur.com/OgoCXS5.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        height: 256px;
+      }
+      main {
+        padding: 20px;
+      }
+      img {
+        max-width: 100%;
+      }
+      footer {
+        background-color: #000;
+        color: #fff;
         padding: 10px 10px;
         text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 69px;
-        border-radius: 10px;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-        cursor: pointer;
-        transition: background-color 0.3s ease;
+        font-weight: bold;
       }
-
-      /* Scale the button on hover */
-      #redirect-button:hover {
-        transform: scale(1.1);
+      .navbar {
+        background-color: #000;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        padding: 7px 1px;
+        font-weight: bold;
+      }
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 4px 6px;
+        text-decoration: none;
+        font-size: 60px;
       }
     </style>
   </head>
   <body>
-    <button id="redirect-button">[ENTER]</button>
-    <script>
-      // Redirect to https://serainox420.github.io/main when button is clicked
-      document.getElementById("redirect-button").addEventListener("click", function() {
-        window.location.href = "https://serainox420.github.io/main";
-      });
+  <header></header>
+    <div class="navbar">
+      <a href="https://serainox420.github.io/main">[ ENTER ]</a>
+    </div>
+    <footer>
+      <p>&copy; 2023 Szmelc Incorporated</p>
+    </footer>
+      <script>
+      setInterval(() => {
+        const elements = document.querySelectorAll("*");
+        for (const el of elements) {
+          el.style.color = getRandomColor();
+        }
+      }, 200);
+      function getRandomColor() {
+  const letters = "0123456789ABCDEF";
+  let green = Math.floor(Math.random() * 7) + 255 + 100 + 100; // generates a random value between 128 and 255 for green channel
+  let color = "#" + green.toString(14).padStart(2, "0").repeat(2);
+  return color;
+}
     </script>
   </body>
 </html>
