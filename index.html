@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Entry point</title>
-<script>
-      window.location.replace('https://serainox420.github.io/main');
+  <title>Page Title</title>
+  <script>
+    function redirect() {
+        window.location.replace('https://serainox420.github.io/main');
+      }
+    setTimeout(function() {
+      document.getElementById('redirectBtn').click();
+    }, 666);
   </script>
 </head>
 <body>
-<h1>Fixme</h1>
+  <h1>This is a Heading</h1>
+  <p>This is a paragraph.</p>
+  <button id="redirectBtn" onclick="redirect()">E</button>
 </body>
 </html>
