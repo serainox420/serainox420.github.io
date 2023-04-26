@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Szmelc.INC</title>
+    <title>Szmelc</title>
     <style>
     html, body {
         height: 100%;
@@ -28,6 +28,9 @@
       }
       main {
         padding: 20px;
+        flex-grow: 1;
+        width: 100%;
+        max-width: 666px;
       }
       img {
         max-width: 100%;
@@ -43,9 +46,10 @@
       .navbar {
         background-color: #171717;
         overflow: hidden;
-        display: flex;
-        font-weight: bold;
+        display: fleX;
         justify-content: center;
+        padding: 14px 16px;
+        font-weight: bold;
       }
       .navbar a {
         float: left;
@@ -73,6 +77,8 @@
         display: flex;
         color: #333;
         padding: 5px;
+        width: 100%;
+        max-width: 600px;
       }
     </style>
   </head>
@@ -82,7 +88,7 @@
       <a href="https://serainox420.github.io/about">[ ABOUT ]</a>
       <a href="https://serainox420.github.io/projects">[ MY PROJECTS ]</a>
       </div>
-      <div class="navbar">
+    <div class="navbar">
       <a href="https://github.com/serainox420">[GITHUB]</a>
       <a href="https://discord.gg/y9h7FjVsX6">[DISCORD]</a>
       <a href="https://linktr.ee/silverainox">[LINKTR.EE]</a>
@@ -90,8 +96,8 @@
     <footer>
       <p>&copy; 2023 Szmelc Incorporated</p>
     </footer>
-        <audio src="https://serainox420.github.io/audio/test.mp3" loop autoplay controls></audio>
-    <script>
+    <audio src="https://serainox420.github.io/audio/test.mp3" loop autoplay controls></audio>
+     <script>
       setInterval(() => {
         const elements = document.querySelectorAll("*");
         for (const el of elements) {
