@@ -14,7 +14,7 @@
         background-position: center;
         background-repeat: no-repeat;
         text-align: center;
-        height: 256px;
+        height: 128px;
       }
       main {
         padding: 20px;
@@ -76,16 +76,13 @@
         for (const el of elements) {
           el.style.color = getRandomColor();
         }
-      }, 1000);
-      
+      }, 256);
       function getRandomColor() {
-        const letters = "0123456789ABCDEF";
-        let color = "#";
-        for (let i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-      }
+  const letters = "0123456789ABCDEF";
+  let green = Math.floor(Math.random() * 7) + 255 + 100 + 100; // generates a random value between 128 and 255 for green channel
+  let color = "#" + green.toString(14).padStart(2, "0").repeat(2);
+  return color;
+}
     </script>
   </body>
 </html>
