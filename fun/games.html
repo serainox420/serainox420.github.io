@@ -1,0 +1,138 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Games</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://serainox420.github.io/js/snowfall.js"></script>
+<script>
+$(document).ready(function(){
+   $(document).snowfall({
+      flakeCount : 200,
+      maxSpeed : 2,
+      maxSize : 5
+  });
+});
+</script>
+    
+    <style>
+    html, body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+      }
+      header {
+        background-image: url("https://i.imgur.com/WXb6jUU.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        height: 256px;
+        width: 100%;
+      }
+      main {
+        padding: 20px;
+        flex-grow: 1;
+        width: 100%;
+        max-width: 320;
+      }
+      img {
+        max-width: 100%;
+      }
+      footer {
+        background-color: #000;
+        color: #fff;
+        padding: 1px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .navbar {
+        background-color: #00000;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        padding: 5px 5px;
+        font-weight: bold;
+      }
+      .navbar a {
+        float: left;
+        display: flex;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 4px 6px;
+        text-decoration: none;
+        font-size: 45px;
+      }
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      .navbar a.active {
+        background-color: #4CAF50;
+        color: white;
+      }
+      .sample-text {
+        background-color: #000;
+        color: #fff;
+        padding: 0px;
+      }
+      audio {
+        display: flex;
+        color: #333;
+        padding: 5px;
+        width: 100%;
+        max-width: 600px;
+      }
+      /* Media query to adjust navbar style for mobile screens */
+      @media only screen and (max-width: 100%) {
+        .navbar a {
+          font-size: 15px;
+          padding: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+    <div class="navbar">
+      <a href="https://serainox420.github.io/fun/games/tetris">[TETRIS]</a>
+      </div><div class="navbar">
+      <a href="https://serainox420.github.io/fun/games/2048">[2048]</a>
+      </div><div class="navbar">
+      <a href="https://serainox420.github.io/fun/games/runner">[RUNNER]</a>
+      </div><div class="navbar">
+      <a href="https://serainox420.github.io/fun/games/xo">[X/O]</a>
+      </div><div class="navbar">
+      <a href="serainox420.github.io/fun/games/shooter">[SHOOTER]</a>
+      </div><div class="navbar">
+      <a href="serainox420.github.io/fun/games/paint">[PAINT]</a>
+    </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 Szmelc Incorporated</p>
+    </footer>
+     <script>
+      setInterval(() => {
+        const elements = document.querySelectorAll("*");
+        for (const el of elements) {
+          el.style.color = getRandomColor();
+        }
+      }, 200);
+      function getRandomColor() {
+  const letters = "0123456789ABCDEF";
+  let green = Math.floor(Math.random() * 7) + 255 + 100 + 100; // generates a random value between 128 and 255 for green channel
+  let color = "#" + green.toString(14).padStart(2, "0").repeat(2);
+  return color;
+}
+    </script>
+  </body>
+</html>
