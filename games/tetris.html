@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>HTML5 Tetris</title>
+        <title>Tetris</title>
         <meta charset="UTF-8">
-
-        <link href='http://fonts.googleapis.com/css?family=Lemon|Gochi+Hand' rel='stylesheet' type='text/css'>
-
-        <link id="fav" rel="shortcut icon" type="image/png" href="http://www.xarg.org/favicon.ico" />
+        <link id="fav"/>
         <style>
 
             a {
-                color: #000;
+                color: #ddd;
                 text-decoration: none;
                 font-family:Arial;
             }
@@ -25,277 +22,73 @@
 
             body {
                 background: #171717;
-            }
-
-            #OfCourseItsMe {
-                font-family:Arial;
-                font-size: 11px;
-                text-decoration:none;
-                color: #78a;
-            }
-
-            #OfCourseItsMe a {
-                font-weight: bold;
+                
             }
 
             #canvas {
-                border: 10px solid #78a;
+                border: 10px solid #65B668;
                 background: #484848;
                 position:absolute;
+                top: 100px;
                 z-index:0;
                 left: 70px;
             }
 
             #preview {
                 position: absolute;
-                left: 550px;
-                border: 10px solid #78a;
+                left: 500px;
+                border: 10px solid #65B668;
                 background: #484848;
-                top: 20px;
+                top: 100px;
                 z-index: 1;
             }
-
-            #highscore {
-                background: #78a;
-                position:absolute;
-                z-index: 100;
-
-                font-family: 'Gochi Hand', sans-serif;
-                font-size: 30px;
-                color: #fff;
-
-                width:400px;
-                left: 70px;
-                top: 300px;
-                text-align: center;
-                padding: 30px 0px;
-                display:none;
-            }
-
-            #nick {
-                border: 0px none;
-                background: #78a;
-                color:white;
-                font-family: inherit;
-                font-size: 20px;
-            }
-
-            #submit {
-                cursor:pointer;
-                font-family: inherit;
-                display:block;
-            }
-
-            #favicon {
-                display:none;
-            }
-
-            #edit, #best {
-                width: 400px;
-                position:absolute;
-                right: -442px;
-                top: 20px;
-                z-index: 2;
-                font-family: Arial;
-                font-size:14px;
-                border: 10px solid #000;
-                background: #fff;
-            }
-
-            #edit table {
-                border-collapse: collapse;
-                background: #484848;
-                float:left;
-                margin: 5px;
-            }
-
-            #edit td {
-                width: 10px;
-                height: 10px;
-                background: #000;
-                margin: 2px;
-                border: 1px solid #fff;
-            }
-
-            #open, #open2 {
-                position:absolute;
-                left: -43px;
-                top: 20px;
-                padding:3px 10px;
-                background: #000;
-                color:white;
-                transform: rotate(90deg);
-                -ms-transform: rotate(90deg);
-                -webkit-transform: rotate(90deg);
-            }
-
-            #best table {
-                margin-top: 20px;
-                margin-left: 50px;
-                margin-bottom: 20px;
-            }
-
-            #open2 {
-                top: 90px;
-                left: -49px;
-            }
-
-            #best td {
-                padding: 5px;
-            }
-
-            h1 {
-                position:absolute;
-                left: -200px;
-                top: 200px;
-                margin:0px;
-                padding:0px;
-                font-size: 60px;
-                font-family: 'Lemon', cursive;
-                color: white;
-                text-shadow: -3px 3px #78a;
-
-                transform: rotate(270deg);
-                -ms-transform: rotate(270deg); /* IE 9 */
-                -webkit-transform: rotate(270deg); /* Safari and Chrome */
-            }
-
             #stat {
-                font-family: 'Gochi Hand', sans-serif;
-                color: white;
-                text-shadow: 2px 2px #78a;
-                font-weight: bold;
-                font-size: 35px;
-            }
-
-            #xarg > img {
-                position:fixed;
-                right:20px;
-                bottom:20px;
-                z-index:1000;
-                border:0;
-            }
-
-            #restart {
-                position:absolute; 
-                z-index: 100; 
-                left: 170px;
-                top: 330px;
-                font-size: 30px;
-                font-family: 'Gochi Hand', sans-serif;
-                display:none;
-            }
-
-
-            #home {
-                display:none;
-                color: #c33;
+        		font-size: 44px;
+                position: relative;
+                right: 60px;
+    	    }
+            h1 {
+            	position: relative;
+            	font-size: 50px;
+                left: 80px;
             }
             
-            #slinks a {
-                color: #c00;
-            }
-
         </style>
     </head>
     <body>
 
-        <h1>HTML5 TETRIS</h1>
+        <h1>[SZMELC TETRIS] [HTML5]</h1>
 
         <canvas id="canvas"></canvas>
         <canvas id="preview"></canvas>
         <canvas id="favicon"></canvas>
 
-        <div id="edit">
-            <div id="open">Edit</div>
-
-            <div><input id="tilesX" type="range" min="5" max="70" value="21" onchange="textBoxEdit(this)"> X <input id="tilesY" type="range" min="5" max="70" value="35" onchange="textBoxEdit(this)"> Tiles</div>
-            <div><input id="tilesSize" type="range" min="5" max="40" value="18" onchange="textBoxEdit(this)"> Tile-Size</div>
-            <div><input id="border" type="range" min="0" max="15" value="2" onchange="textBoxEdit(this)"> Border</div>
-            <div><input id="speedDelay" step="10" type="range" min="40" max="1000" value="200" onchange="textBoxEdit(this)"> Speed Delay</div>
-
-            <div><input type="checkbox" value="1" id="Cpause" onchange="textBoxEdit(this)"> Pause (p)</div>
-            <div><input type="checkbox" value="1" id="Cauto" onchange="textBoxEdit(this)"> Autopilot (a)</div>
-            <div><input type="checkbox" value="1" id="Cshadow" onchange="textBoxEdit(this)" checked="checked"> Shadow (s)</div>
-            <div><input type="checkbox" value="1" id="Cpreview" onchange="textBoxEdit(this)" checked="checked"> Preview (w)</div>
-            <div><input type="checkbox" value="1" id="Cfavicon" onchange="textBoxEdit(this)" checked="checked"> Favicon (f)</div>
-            <div><input type="checkbox" value="1" id="Cgamepad" onchange="textBoxEdit(this)"> Gamepad</div>
-
-            <div>Active shadow and preview reduces the score per tile!</div>
-
-            <div id="tables">
-
+            <div id="open"></div>
+            <div id="tables"></div>   
             </div>
-
-            <div id="slinks">
-                Share Custom Tetris<br>
-                <a id="sFB" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.xarg.org%2Fproject%2Ftetris%2F">FB</a> -
-                <a id="sTW" href="http://twitter.com/share?text=HTML5%20Tetris%20made%20by%20%40roberteisele&amp;url=http%3A%2F%2Fwww.xarg.org%2Fproject%2Ftetris%2F">TW</a> - 
-                <a id="sGP" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.xarg.org%2Fproject%2Ftetris%2F">G+</a>
-            </div>
-
         </div>
-
-        <div id="best">
-            <div id="open2">Score</div>
+            <div id="open2"></div>
 
             <table>
 
                 <tr>
-                    <th>Rank</th>
-                    <th>Name</th>
-                    <th>Score</th>
-                    <th>Lines</th>
+
                 </tr>
-                {local:$i}
-                {php}$i=0;{/php}
-                {fores $score as $s}
-                <tr>
-                    <td>#{!++$i}</td>
-                    <td>{$s.TName}</td>
-                    <td>{!$s.TScore}</td>
-                    <td>{!$s.TLine}</td>
-                </tr>
-                {/fores}
+
             </table>
-
-        </div>
-
-        <div id="highscore">
-
-            <div>Enter your name</div>
-
-            <input type="text" id="nick" placeholder="Your name">
-
-            <span id="submit">go</span>
-
-        </div>
-
-        <div id="restart">
-            Click to restart
-        </div>
 
         <div style="position:absolute;left: 560px;top: 250px;">
 
             <div style="height: 100px;">
-                <a id="home" href="http://www.xarg.org/project/tetris/">Highscore participation</a>
+                
             </div>
             <div id="stat">
                 Score: <span id="score">0</span><br>
                 Lines: <span id="lines">0</span><br>
             </div>
-
-
-            <span id="OfCourseItsMe">by <a href="http://www.xarg.org/">Robert Eisele</a> (<a href="https://twitter.com/RobertEisele">Twitter</a>)<br>Source &amp; Description (<a href="https://github.com/infusion/HTML5-Tetris">Github</a>)</span>
-
-        </div>
-
-
-        <script src="/download/tetris.js"></script>
-
-        <a id="xarg" href="http://www.xarg.org/projects/"><img width="59" height="61" src="http://www.xarg.org/image/xarg-logo.png" alt="xarg open projects" /></a>
-
     </body>
+    
+    
 <script>
 /**
  * @license Tetris v1.0.0 08/04/2014
@@ -307,18 +100,9 @@
 
 (function(window) {
 
-    var document = window['document'];
-    var location = window['location'];
-    var navigator = window['navigator'];
-
     var canvas = document.getElementById('canvas');
     var preview = document.getElementById('preview');
 
-    var favicon = document.getElementById('favicon');
-    var fav = document.getElementById('fav');
-
-    var divBest = document.getElementById('best');
-    var divEdit = document.getElementById('edit');
     var divOpen = document.getElementById('open');
     var divOpenScore = document.getElementById('open2');
 
@@ -328,12 +112,6 @@
     var divTables = document.getElementById('tables');
 
     var highscore = document.getElementById('highscore');
-    var submit = document.getElementById('submit');
-    var nick = document.getElementById('nick');
-
-    var sFB = document.getElementById('sFB');
-    var sTW = document.getElementById('sTW');
-    var sGP = document.getElementById('sGP');
 
     var ctx = canvas.getContext('2d');
     var ptx = preview.getContext('2d');
@@ -1437,60 +1215,13 @@
         draw();
     };
 
-
-    /**
-     * Update the social links
-     */
-    var updateSocialLinks = function() {
-
-        var fb = 'https://www.facebook.com/sharer/sharer.php?u=';
-        var tw = 'http://twitter.com/share?text=Check%20out%20my%20custom%20HTML5%20Tetris%20(made%20by%20%40RobertEisele)&amp;url=';
-        var gp = 'https://plus.google.com/share?url=';
-
-        var P = [];
-        
-        for (var i = pieces.length; i--; ) {
-
-            P[i] = pieces[i].slice(0, 1 + PIECE_SHAPE); // Upper slice() bound is exclusive, so 1+x
-            P[i][PIECE_PROBABILITY] = 1; // We kill the probability for sake of string length. Maybe we'll find a better solution
-           
-            P[i][PIECE_COLOR] = P[i][PIECE_COLOR][0].substring(4, P[i][PIECE_COLOR][0].length - 1).split(',');
-        }
-
-        try {
-
-            // See prepareUrlHash() as the opposite endpoint
-            location.hash = window['btoa'](JSON.stringify({
-                'P': P,
-                'X': tilesX,
-                'Y': tilesY,
-                'S': tileSize,
-                'B': tileBorder,
-                'Q': speed
-            }));
-            
-        } catch (e) {
-            return;
-        }
-
-        var url = encodeURIComponent(location.href);
-        sFB.setAttribute('href', fb + url);
-        sTW.setAttribute('href', tw + url);
-        sGP.setAttribute('href', gp + url);
-    };
-
-    /**
-     * Draw all components on the screen
-     */
     var draw = function() {
 
         // http://jsperf.com/ctx-clearrect-vs-canvas-width-canvas-width/3
         // Should be fine and also the standard way to go
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        if (showFavicon) {
-            ftx.clearRect(0, 0, favicon.width, favicon.width);
-        }
+
 
         var cur = curPiece[direction];
 
@@ -1578,15 +1309,7 @@
          */
 
         // Draw text overlay
-        if (gameStatus === STATUS_PAUSE) {
-            drawTextScreen("PAUSE");
-        } else if (gameStatus === STATUS_GAMEOVER) {
-            drawTextScreen("GAME OVER");
 
-            if (expelled) {
-                document.getElementById('restart').style.display = 'block';
-            }
-        }
     };
 
 
@@ -1646,21 +1369,20 @@
 
         for (var i = pieces.length; i--; ) {
 
-            // Pre-compute tile colors
             var color = pieces[i][PIECE_COLOR];
 
-            color[0]|= 0;
-            color[1]|= 0;
-            color[2]|= 0;
+// Generate random shade of green
+var randomGreen = Math.floor(Math.random() * 256);
+var greenColor = "rgb(" + randomGreen + "," + Math.floor(Math.random() * 256) + "," + randomGreen + ")";
 
-            pieces[i][PIECE_COLOR] = [
-                // Normal color
-                "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")",
-                // Dark color
-                "rgb(" + Math.round(color[0] - color[0] * opacity) + "," + Math.round(color[1] - color[1] * opacity) + "," + Math.round(color[2] - color[2] * opacity) + ")",
-                // Light color
-                "rgb(" + Math.round(color[0] + (255 - color[0]) * opacity) + "," + Math.round(color[1] + (255 - color[1]) * opacity) + "," + Math.round(color[2] + (255 - color[2]) * opacity) + ")"
-            ];
+pieces[i][PIECE_COLOR] = [
+    // Normal color
+    greenColor,
+    // Dark color
+    "rgb(" + Math.round(randomGreen - randomGreen * opacity) + "," + Math.round(Math.random() * 50) + "," + Math.round(randomGreen - randomGreen * opacity) + ")",
+    // Light color
+    "rgb(" + Math.round(randomGreen + (255 - randomGreen) * opacity) + "," + Math.round(Math.random() * 50 + 200) + "," + Math.round(randomGreen + (255 - randomGreen) * opacity) + ")"
+];
 
             // Add rotations
             for (var j = PIECE_SHAPE; j < 4 - 1 + PIECE_SHAPE; j++) {
@@ -1680,7 +1402,6 @@
             pieces[i][PIECE_PROBABILITY]/= sum;
 
             // Append tables to the menu
-            appendEditTable(divTables, pieces[i]);
         }
     };
 
@@ -1689,7 +1410,7 @@
      * Set the actual rendered favicon
      */
     var setFavicon = function() {
-        fav['href'] = favicon['toDataURL']('image/png');
+        fav['href'] = favicon['toDataURL']('imae/png');
     };
 
 
@@ -1748,14 +1469,7 @@
      * 
      * @param {boolean=} diag Prevent the dialogue
      */
-    var setExpelled = function(diag) {
-
-        if (!expelled && !diag) {
-            alert("This disables highscore participation.");
-        }
-        expelled = true;
-        displayHomeLink();
-    };
+    
     
     /*
      * Display the home link when needed
@@ -1777,10 +1491,7 @@
 
             piece = piece[PIECE_SHAPE];
 
-            for (var i = 0; i < piece.length; i+= 2) {
-                if (piece[i] === x - 4 && piece[i + 1] === y - 4)
-                    return i;
-            }
+            
             return -1;
         };
 
@@ -1881,61 +1592,10 @@
     };
 
 
-    // Set the click handler for the submit button
-    addEvent(submit, 'click', function() {
-
-        var name = nick.value;
-
-        var img = document.createElement('img');
-
-        if (expelled) {
-            return;
-        }
-
-        if (name) {
-
-            img.onload = function() {
-                img.onload = null;
-            };
-
-            // Dafaq, it's tetris! Stop cheating and find a new hobby...
-            img.src = '/pixel.php?name=' + encodeURIComponent(name) + "&score=" + score + "&lines=" + clearedLines + "&date=" + Date.now();
-
-            highscore.style.display = 'none';
-
-            init();
-
-        } else {
-            nick.focus();
-        }
-    });
-
-
     // Set the click handler for menu opening
     var evTabOpen = function(ev) {
 
-        var elm = ev.target.parentNode;
 
-        if (elm === divEdit) {
-            divEdit.style.zIndex = 4;
-            divBest.style.zIndex = 2;
-        } else {
-            divEdit.style.zIndex = 2;
-            divBest.style.zIndex = 4;
-        }
-
-        animate(600, function(k) {
-            /*
-             var pos = k === 1 ? 1 : 1 - Math.pow(2, -10 * k);
-             
-             pos = editClosed + pos * (1 - 2 * editClosed);
-             
-             edit.style.right = (-pos * 420 | 0) + 'px';
-             */
-            elm.style.right = (420 * ((k === 1 ? 1 : 1 - Math.pow(2, -10 * k)) * (1 - 2 * menuOpen) + menuOpen - 1) | 0) + 'px';
-        }, function() {
-            menuOpen = !menuOpen;
-        });
     };
     addEvent(divOpen, 'click', evTabOpen);
     addEvent(divOpenScore, 'click', evTabOpen);
@@ -2049,36 +1709,7 @@
 
         var value = parseInt(elm.value, 10);
 
-        switch (elm.getAttribute('id')) {
-
-            case 'border':
-                tileBorder = value;
-                setExpelled();
-                break;
-
-            case 'tilesX':
-                tilesX = value;
-                setExpelled();
-                break;
-
-            case 'tilesY':
-                tilesY = value;
-                setExpelled();
-                break;
-
-            case 'tilesSize':
-                tileSize = value;
-                setExpelled();
-                break;
-
-            case 'Cpreview':
-                showPreview = elm.checked;
-                if (showPreview) {
-                    preview.style.display = 'block';
-                } else {
-                    preview.style.display = 'none';
-                }
-                return;
+        switch (elm.getAttribute('i')) {
 
             case 'Cpause':
                 pause();
@@ -2113,23 +1744,9 @@
                 speedScore = Math.max(1, Math.round(28.2632 * Math.exp(-0.00864879 * speed)));
                 return;
 
-            case 'Cfavicon':
-                showFavicon = elm.checked;
-                if (!showFavicon) {
-                    fav['href'] = originalFavicon;
-                }
-                return;
 
-            case 'Cgamepad':
-                if (elm.checked) {
-                    Gamepad.startPolling();
-                } else {
-                    Gamepad.stopPolling();
-                }
-                return;
         }
 
-        updateSocialLinks();
 
         prepareBoard();
 
@@ -2141,28 +1758,6 @@
         updatePreview();
     };
 
-    // Display the open buttons for the menus
-    window.setTimeout(function() {
-
-        animate(400, function(pos) {
-
-            var start = -442;
-            var end = -420;
-
-            var p1 = Math.min(1, pos / 0.5);
-            var p2 = Math.max(0, (pos - 0.5) / 0.5);
-
-            divEdit.style.right = (start + (p1 * (end - start))) + "px";
-            divBest.style.right = (start + (p2 * (end - start))) + "px";
-
-        }, function() { });
-
-    }, 800);
-
-
-    if (!showFavicon) {
-        document.getElementById('showFavicon').parentNode.style.display = 'none';
-    }
 
     /**
      * Copyright 2012 Google Inc. All Rights Reserved.
@@ -2398,9 +1993,8 @@
     // Prepare the pieces and pre-calculate some caches
     preparePieces(pieces);
     
-    if (location['hash']) {
+    if (location['has']) {
         // If a URL was given, update social links
-        updateSocialLinks();
     }
     
     // Prepare the board
@@ -2417,4 +2011,19 @@
     
 })(this);
 </script>
+<script>
+      setInterval(() => {
+        const elements = document.querySelectorAll("*");
+        for (const el of elements) {
+          el.style.color = getRandomColor();
+        }
+      }, 200);
+      function getRandomColor() {
+  const letters = "0123456789ABCDEF";
+  let green = Math.floor(Math.random() * 7) + 255 + 100 + 100; // generates a random value between 128 and 255 for green channel
+  let color = "#" + green.toString(14).padStart(2, "0").repeat(2);
+  return color;
+}
+    </script>
+</body>
 </html>
