@@ -25,6 +25,7 @@
         color: #fff;
         padding: 1px;
         text-align: center;
+        font-weight: bold;
       }
       .navbar {
         background-color: #171717;
@@ -32,6 +33,7 @@
         display: fleX;
         justify-content: center;
         padding: 14px 16px;
+        font-weight: bold;
       }
       .navbar a {
         float: left;
@@ -57,11 +59,12 @@
         font-size: 35px;
         text-align: center;
         display: block;
+        font-weight: bold;
       }
       .text {
         background-color: #171717;
         color: #fff;
-        padding: px;
+        padding: 1px;
         font-size: 25px;
         text-align: center;
         display: block;
@@ -78,6 +81,7 @@
     <main>
       <div class="sample-text">
         <p>Sample Title</p>
+        </div>
       <div class="text">
         <p>Text</p>
       </div>
@@ -111,5 +115,19 @@
     <footer>
       <p>&copy; 2023 Szmelc Incorporated</p>
     </footer>
+      <script>
+      setInterval(() => {
+        const elements = document.querySelectorAll("body, footer");
+        for (const el of elements) {
+          el.style.color = getRandomColor();
+        }
+      }, 200);
+      function getRandomColor() {
+  const letters = "0123456789ABCDEF";
+  let green = Math.floor(Math.random() * 7) + 255 + 100 + 100; // generates a random value between 128 and 255 for green channel
+  let color = "#" + green.toString(14).padStart(2, "0").repeat(2);
+  return color;
+}
+    </script>
   </body>
 </html>
