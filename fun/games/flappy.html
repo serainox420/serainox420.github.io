@@ -1,20 +1,28 @@
-<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <style>
 canvas {
-    border:1px solid #d3d3d3;
+    border:3px solid green;
     background-color: #171717;
 }
 body {
-    background-color: #171717;
+    background-color: #000;
+    color: green;
+}
+h {
+  color: green;
+  font-family: Ancient;
+  font-size: 50px;
+}
+@font-face {
+  font-family: Ancient;
+  src: url('https://serainox420.github.io/fonts/Ancient.ttf');
 }
 </style>
 </head>
 <body onload="startGame()">
 <script>
-
 var myGamePiece;
 var myObstacles = [];
 var myScore;
@@ -29,12 +37,12 @@ function startGame() {
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 480;
-        this.canvas.height = 270;
+        this.canvas.width = 750;
+        this.canvas.height = 500;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
-        this.interval = setInterval(updateGameArea, 20);
+        this.interval = setInterval(updateGameArea, 8);
         },
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -104,11 +112,11 @@ function updateGameArea() {
     myGameArea.frameNo += 1;
     if (myGameArea.frameNo == 1 || everyinterval(150)) {
         x = myGameArea.canvas.width;
-        minHeight = 20;
-        maxHeight = 200;
+        minHeight = 10;
+        maxHeight = 210;
         height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
-        minGap = 50;
-        maxGap = 200;
+        minGap = 40;
+        maxGap = 220;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
         myObstacles.push(new component(10, height, "green", x, 0));
         myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
@@ -133,8 +141,13 @@ function accelerate(n) {
 }
 </script>
 <br>
-<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
-<p>Use the ACCELERATE button to stay in the air</p>
-<p>How long can you stay alive?</p>
+<body>
+	<p></p>
+    <button style="background-color: #444444; color: #00ff00; font-size: 100px; padding: 10px 20px;" onmousedown="accelerate(-0.05)" onmouseup="accelerate(0.05)">[FLAP]</button>
+    <p></p>
+    <h>Flappy Szmelc v1</h>
+    <p>Use the [FLAP] button to stay in the air</p>
+    <p>Hit F5 to restart</p>
 </body>
 </html>
+
