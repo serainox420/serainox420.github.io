@@ -3,33 +3,39 @@
   <head>
     <title>ABOUT</title>
     
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://serainox420.github.io/styles.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://serainox420.github.io/js/snowfall.js"></script>
-<script>
-$(document).ready(function(){
-   $(document).snowfall({
-      flakeCount : 200,
-      maxSpeed : 2,
-      maxSize : 5
-  });
-});
-</script>
+    <script src="https://serainox420.github.io/js/snowfall.js"></script>
+    <script>
+      $(document).ready(function(){
+         $(document).snowfall({
+            flakeCount : 200,
+            maxSpeed : 2,
+            maxSize : 5
+        });
+      });
+    </script>
     
     <style>
       body {
         background-color: #000000;
         color: #fff;
-        font-family: Ancient, sans-serif;
+        font-family: Ancient;
+        margin: 20;
       }
       .title {
-        font-size: 48px;
+        font-size: 100px;
         text-align: center;
-        padding-top: 0px;
+        padding 0px 0px;
+        height: 69px;
+        position: fixed;
+        top: -60px;
+        width: 100%;
       }
       main {
         padding: 20px;
+        margin-top: 100px;
       }
       img {
         max-width: 100%;
@@ -46,15 +52,12 @@ $(document).ready(function(){
         overflow: hidden;
         display: flex;
         justify-content: center;
-        padding: 14px 16px;
-        font-weight: bold;
       }
       .navbar a {
         float: left;
         display: block;
         color: #f2f2f2;
         text-align: center;
-        padding: 14px 16px;
         text-decoration: none;
         font-size: 35px;
       }
@@ -64,12 +67,12 @@ $(document).ready(function(){
       }
       .navbar a.active {
         background-color: #4CAF50;
-        color: white;
+        color: cyan;
       }
       .sample-text {
         background-color: #171717;
         color: #fff;
-        padding: 1px;
+        padding: 5px;
         font-size: 35px;
         text-align: center;
         display: block;
@@ -85,12 +88,11 @@ $(document).ready(function(){
     </div>
     <main>
       <div class="sample-text">
-        <p>Sample Text</p>
+        <pe>Sample Text</pe>
+      </div> 
+      <div class="navbar">
+        <a href="https://www.google.com">SilverX</a>
       </div>
-          <div class="navbar">
-      <a href="https://www.google.com">SilverX</a>
-      <a href="https://www.google.com">Szmelc.Inc</a>
-    </div>
     </main>
     <footer>
       <p>&copy; 2023 Szmelc Incorporated</p>
