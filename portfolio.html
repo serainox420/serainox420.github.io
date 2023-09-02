@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    
+    <link rel="stylesheet" href="https://serainox420.github.io/styles.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://serainox420.github.io/js/snowfall.js"></script>
+    <script>
+      $(document).ready(function(){
+         $(document).snowfall({
+            flakeCount : 100,
+            maxSpeed : 9,
+            maxSize : 9
+        });
+      });
+    </script>
+    
+    <style>
+      body {
+        background-color: #000000;
+        color: #fff;
+        font-family: Ancient;
+        margin: 20;
+      }
+      .title {
+        font-size: 150px;
+        text-align: center;
+        padding 0px 0px;
+        height: 49px;
+        position: fixed;
+        top: -130px;
+        width: 100%;
+      }
+      main {
+        padding: 20px;
+        margin-top: 100px;
+      }
+      img {
+        max-width: 100%;
+      }
+      footer {
+        background-color: #000;
+        color: #fff;
+        padding: 1px;
+        text-align: center;
+        font-family: Ancient;
+      }
+      .navbar {
+        background-color: #171717;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+      }
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        text-decoration: none;
+        font-size: 45px;
+      }
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      .navbar a.active {
+        background-color: #4CAF50;
+        color: cyan;
+      }
+      .sample-text {
+        background-color: #171717;
+        color: #fff00;
+        padding: 5px;
+        font-size: 25px;
+        text-align: center;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">
+      <p> Portfolio </p>
+    </div>
+    <div class="navbar">
+      <a href="https://serainox420.github.io/main">Main Menu</a>
+    </div>
+    <main>
+      <div class="sample-text">
+        <pe>Richest Presence...</pe>
+      </div> 
+      <div class="navbar">
+        <a href="https://www.google.com">Szmelc GNU GitHub</a>
+      </div>
+      </div> 
+      <div class="navbar">
+        <a href="https://www.google.com">Personal GitHub</a1>
+      </div>
+      </div> 
+      <div class="navbar">
+        <a href="https://www.google.com">Linktr.ee</a>
+      </div>
+      </div> 
+      <div class="navbar">
+        <a href="https://www.google.com">Gallery</a>
+      </div>
+      </div> 
+      <div class="navbar">
+        <a href="https://www.google.com">Gaming</a>
+      </div>
+      </div> 
+      <div class="navbar">
+        <a href="https://www.google.com">404</a>
+      </div>
+      </div> 
+      <div class="navbar">
+        <a href="https://www.google.com">Discord Server</a>
+      </div>
+      </div> 
+      <div class="navbar">
+        <a href="https://www.google.com">Contact</a>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 Szmelc GNU</p>
+    </footer>
+    <script>
+      setInterval(() => {
+        const elements = document.querySelectorAll("body, footer");
+        for (const el of elements) {
+          el.style.color = getRandomColor();
+        }
+      }, 200);
+      function getRandomColor() {
+  const letters = "0123456789ABCDEF";
+  let green = Math.floor(Math.random() * 7) + 255 + 100 + 100; // generates a random value between 128 and 255 for green channel
+  let color = "#" + green.toString(14).padStart(2, "0").repeat(2);
+  return color;
+}
+    </script>
+  </body>
+</html>
