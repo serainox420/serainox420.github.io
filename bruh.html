@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flying Buttons</title>
+    <style>
+        body {
+            margin: 10;
+            overflow: hidden;
+        }
+
+        button {
+            position: absolute;
+            width: 50px;
+            height: 30px;
+            background-color: black;
+            color: #f00;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="spawnButton">Click</button>
+    <script>
+        document.getElementById("spawnButton").addEventListener("click", function () {
+            for (let i = 0; i < 20000; i++) {
+                const button = document.createElement("button");
+                button.innerText = "Bruh";
+                document.body.appendChild(button);
+
+                // Randomize button position
+                const maxX = window.innerWidth - 50;
+                const maxY = window.innerHeight - 30;
+                const randomX = Math.random() * maxX;
+                const randomY = Math.random() * maxY;
+
+                button.style.left = randomX + "px";
+                button.style.top = randomY + "px";
+
+                // Randomize button movement
+                const speedX = (Math.random() - 0.6) * 10;
+                const speedY = (Math.random() - 0.5) * 10;
+
+                function animateButton() {
+                    const currentX = parseFloat(button.style.left);
+                    const currentY = parseFloat(button.style.top);
+
+                    const newX = currentX + speedX;
+                    const newY = currentY + speedY;
+
+                    if (newX < 0 || newX > maxX || newY < 0 || newY > maxY) {
+                        // Remove the button when it goes out of bounds
+                        document.body.removeChild(button);
+                    } else {
+                        button.style.left = newX + "px";
+                        button.style.top = newY + "px";
+                        requestAnimationFrame(animateButton);
+                    }
+                }
+
+                // Start the animation
+                requestAnimationFrame(animateButton);
+            }
+        });
+    </script>
+</body>
+</html>
