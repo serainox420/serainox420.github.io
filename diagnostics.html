@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Diagnostic Page</title>
+    <style>
+        body {
+            background-color: black;
+            color: lightgreen;
+        }
+    </style>
+    <script>
+        // Function to display session uptime
+        function displaySessionUptime() {
+            var currentTime = new Date();
+            var sessionStartTime = new Date(sessionStorage.getItem('sessionStartTime'));
+            var sessionDuration = currentTime - sessionStartTime;
+
+            var seconds = Math.floor(sessionDuration / 1000);
+            var minutes = Math.floor(seconds / 60);
+            var hours = Math.floor(minutes / 60);
+            var days = Math.floor(hours / 24);
+
+            seconds %= 60;
+            minutes %= 60;
+            hours %= 24;
+
+            document.getElementById('sessionUptime').innerHTML =
+                days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds";
+        }
+
+        // Function to display user agent and more information
+        function displayUserAgent() {
+            var userAgent = navigator.userAgent;
+            document.getElementById('userAgent').innerHTML = userAgent;
+
+            var browserName = userAgent.match(/(Chrome|Safari|Firefox|Edge|Opera)/i);
+            document.getElementById('browserName').innerHTML = browserName ? browserName[0] : 'Unknown';
+
+            var platform = navigator.platform;
+            document.getElementById('platform').innerHTML = platform;
+
+            var language = navigator.language;
+            document.getElementById('language').innerHTML = language;
+        }
+
+        // Function to perform a simple speed test
+        function performSpeedTest() {
+            var startTime = new Date().getTime();
+            var img = new Image();
+            img.onload = function() {
+                var endTime = new Date().getTime();
+                var duration = (endTime - startTime) / 1000;
+                document.getElementById('speedTest').innerHTML = duration + " seconds";
+            };
+            img.src = "https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_92x30dp.png";
+        }
+
+        // Function to display cookies
+        function displayCookies() {
+            var cookies = document.cookie;
+            document.getElementById('cookies').innerHTML = cookies;
+        }
+
+        // Initialize the session start time if not already set
+        if (!sessionStorage.getItem('sessionStartTime')) {
+            var currentTime = new Date();
+            sessionStorage.setItem('sessionStartTime', currentTime);
+        }
+
+        // Display session uptime, user agent, cookies, and perform a speed test on page load
+        window.onload = function() {
+            displaySessionUptime();
+            displayUserAgent();
+            displayCookies();
+            performSpeedTest();
+        };
+    </script>
+</head>
+<body>
+    <h1>User Diagnostic Page</h1>
+    <p><strong>Session Uptime:</strong> <span id="sessionUptime"></span></p>
+    <p><strong>User Agent:</strong> <span id="userAgent"></span></p>
+    <p><strong>Browser Name:</strong> <span id="browserName"></span></p>
+    <p><strong>Platform:</strong> <span id="platform"></span></p>
+    <p><strong>Language:</strong> <span id="language"></span></p>
+    <p><strong>Speed Test:</strong> <span id="speedTest"></span></p>
+    <p><strong>Cookies:</strong> <span id="cookies"></span></p>
+</body>
+</html>
