@@ -8,7 +8,7 @@ let filesContent = {};
 function loadTxtFiles() {
     let fetchPromises = fileNames.map(fileName => {
         // Construct the URL for the raw content of each file
-        let url = `https://raw.githubusercontent.com/serainox420/serainox420/personal/txt/${fileName}`;
+        let url = `https://raw.githubusercontent.com/serainox420/serainox420.github.io/personal/szmelcdb/txt/${fileName}`;
         return fetch(url)
             .then(response => {
                 if (!response.ok) {
