@@ -1,0 +1,196 @@
+KAT 2 WAREZ
+https://xaox01.github.io/kiepscy/
+https://fmhy.pages.dev - warez DB
+https://fitgirl-repacks.site - gry
+https://www.dodi-repacks.site - gry
+https://elamigos.site - gry
+https://susflix.tv/ - video
+https://movie-web.app/ - video
+https://filman.cc/ - video
+https://vizjer.pl/ - video
+https://zaluknij.cc/ - video
+https://fmhy.pages.dev - zbiór warezów
+https://rentry.co/streambase - zbiór warezów
+https://xaox01.github.io/kiepscy/ - wszystkie odcinki kiepskich
+https://flixwave.to/ - darmowe funkcje premium (?)
+
+KAT 3 - MEMES
+https://ambigram.com.pl/generator-nazwy-firmy/
+https://textart4u.blogspot.com
+https://basedmods.eth.limo - banned game mods
+https://spectrogram.sciencemusic.org - drawing music tool
+https://huggingface.co/spaces/AP123/IllusionDiffusion - Generate stunning high quality illusion artwork
+
+KAT 4 PROGRAMMING
+https://www.exploit-db.com/shellcodes - exploit database
+https://www.w3.org/WAI/
+https://en.wikipedia.org/wiki/Box-drawing_character - GUI
+https://www.alt-codes.net - ASCII
+https://coolsymbol.com - ASCII
+https://dev.to/coderallan/how-to-spice-up-your-markdown-documents-2pjg - MARKDOWN CREATING
+https://www.iconarchive.com - zbiór ikon
+https://www.figma.com/ - UI design
+https://codebeautify.org/ - code formatter
+https://developer.mozilla.org/en-US/?v=1 - dev utils
+https://caniuse.com/ - css dev (?)
+https://html.spec.whatwg.org/ - documentation HTML
+https://www.freecodecamp.org/ - dev courses
+https://tutorials.comandeer.pl/ - courses
+https://css-tricks.com/ - dev courses
+https://javascript.info/ - dev courses
+https://chrome.google.com/webstore/detail/buster-captcha-solver-for/mpbjkejclgfgadiemmefgebjfooflfhl/related - api to crack Captcha
+https://www.udemy.com/ - dev courses
+https://medium.com/geekculture/learn-css-by-playing-games-cf70a79a38
+https://zapier.com/ - dev utils
+https://docs.asciidoctor.org/asciidoc/latest/ - ASCII DOC documentation
+https://huggingface.co/datasets/harpomaxx/unix-commands - Unix Commands Dataset
+https://fonts.google.com/icons - Icons from Google
+https://rop.nl/truetype2gfx/ -  Converting fonts from TrueType to Adafruit GFX
+https://marketplace.visualstudio.com/items?itemName=michelemelluso.gitignore - custom gitignore
+https://wiki.python.org/moin/GuiProgramming - Python Documentation
+https://nicegui.io - Python GUI utils
+https://www.devgpt.com/ - ChatGPT dev utils
+https://detectlanguage.com/ - AI language detection web service
+https://developers.virustotal.com/reference/overview - VirusTotal API Overview
+https://platform.openai.com/docs/introduction - OpenAI Documentation
+https://linuxcommandlibrary.com/ - list of Linux commands
+https://philippegroarke.com/posts/2018/c++_ui_solutions/ - list of UI solutions
+https://www.reddit.com/r/cpp/comments/babfl5/a_pretty_big_list_of_c_gui_libraries/ - C libraries
+https://en.wikipedia.org/wiki/List_of_widget_toolkits - List of wiget toolkits
+https://gsap.com/ - JavaScript animation library
+https://www.holopin.io - badge creator (?)
+https://codepen.io/GreenSock/pen/jOxpVw?editors=1111 - GSAP Scramble Text Plugin
+https://skip.tools/ - dev util for SwiftUI apps for iOS and Android
+https://wren.io/ - lua-based scripting language
+https://www.asciiart.eu/text-to-ascii-art - converter from text to ASCII
+https://docs.kernel.org/driver-api/usb/writing_usb_driver.html - util for usb driver on Linux
+https://flet.dev/gallery -  based on Flutter framework that allows building interactive multi-user web
+https://www.pythonanywhere.com - Host, run, and code Python in the cloud!
+https://www.felixcloutier.com/x86/ - low-level command list
+https://sandpile.org/ - source for technical x86 processor information
+https://www.ursinaengine.org - A Python powered, open source game engine
+https://apilayer.com/?e=Sign+Up&l=Success - Curated API Marketplace
+http://undocumented.ntinternals.net - The Undocumented Functions Microsoft Windows NT/2000/XP/Win7
+https://wiki.osdev.org/Main_Page - wiki about PCs? xD
+https://osintframework.com - list of utils for osint
+https://scraperbox.com/documentation - Web Scraping API Documentation
+https://cookbook.openai.com/articles/related_resources - CookBook AI
+https://commonmark.org/help/ - Documentation for MARKDOWN
+https://community.openai.com/tag/chatgpt-plugin - DB of Plugin for ChatGPT
+https://forums.hak5.org/topic/39403-table-of-wifi-password-standards/ - Table of WiFi Password Standards
+https://www.qsl.net/yo5ofh/hobby%20circuits/ascii.htm - Assorted ASCII Schematics
+https://lmu.web.psi.ch/docu/manuals/software_manuals/linux_sl/usb_linux_programming_guide.pdf - USB Linux Programming Guide
+https://platform.openai.com/docs/plugins/introduction - ChatGPT Documentation
+http://www.linux-usb.org/usb-ids.html - The USB ID Repository
+
+KAT - TOOLS
+https://medicatusb.com/
+https://www.nirsoft.net/
+https://massgrave.dev/ - windows & office activator
+http://www.linux-usb.org
+https://10minute-email.com - temporary mail
+https://10minutesemail.net - temporary mail
+https://www.minuteinbox.com - temporary mail
+https://10minemail.com/en/ - temporary mail
+https://www.windy.com - weather site
+https://open-meteo.com/ - weather
+https://www.opendesktop.org/ - M$ office alternative (?)
+https://aminet.net/tree - a distributable Amiga software
+https://www.passmark.com - browser benchmark
+https://www.memtest86.com - benchmark
+https://atlasos.net/ - debloat programm for Windows 10
+https://pandoc.org/ -  universal document converter
+https://creativetechguy.com/utilities - bunch of helpfull tools
+https://www.adobe.com/express/templates/newsletter - newsletter templates
+https://www.cyberciti.biz/tips/unix-linux-draw-any-kind-of-boxes-around-text-editor.html - ASCII in TTY (?)
+https://freestuffbot.xyz - Discord bot for freestuff
+https://www.asciiart.eu/text-to-ascii-art
+https://www.favoree.io/ - quality DB of Youtube channels
+https://huggingface.co/spaces - app center(?)
+
+
+
+
+KAT DISCORD'S CHANNELS ( or another servers)
+https://discord.gg/QNpNeKPVqw
+https://t.me/cdapl_bot
+https://t.me/CzomikBot
+https://discord.gg/ag4kkSx4
+https://discord.com/channels/940431029037072416/1169419266316050514/1169439354695995403
+https://discord.gg/cvcH2wGPRJ
+
+KAT DIY
+https://www.fpga4fun.com - FPGA assets site
+https://store.balena.io/collections/accesories/products/raspberry-pi-compute-module-3-32gb-emmc - Raspberry module
+https://orientdisplay.com/pl/knowledge-base/lcd-basics/lcd-ctp-interface/
+https://blog.devgenius.io/building-your-own-search-engine-from-scratch-e542a1068c44 - DIY
+https://twitter.com/BillieRubenMake/status/1218496270836256769 - CAD TIPS (?)
+http://www.designinganalogchips.com/ -  CMOS and bipolar analog IC design
+http://busyducks.com/wp_4_1/2015/11/16/ascii-art-arduino-pinouts/
+
+KAT AI
+https://civitai.com/ - AI picture generator(?)
+https://vocalremover.org - AI audio tool
+https://elevenlabs.io/ - AI voice generator
+https://huggingface.co/lllyasviel/ControlNet - AI something(?)
+https://bard.google.com - AI chatbot
+https://civitai.com/ - AI picture generator
+https://elicit.com/ - AI docs analyzer
+https://www.perplexity.ai - AI chatbot
+https://punchlines.ai - AI comedy generator
+https://cursor.sh/ - AI code editor
+https://aicodeconvert.com/ - AI Code Converter
+https://zzzcode.ai/code-generator - AI Code Generator
+https://pornx.ai/create - AI porn picture generator
+https://dreamgf.ai/ - AI picture generator
+https://ehentai.ai/ - AI Hentai generator
+https://made.porn/login?status=limit-reached AI Porn Generator
+https://ainewsbase.com/5-best-ai-porn-generators-nsfw/ - DB of AI Porn Generators
+https://www.bing.com/images/create/ - AI Picture Generator
+
+
+
+KAT ŚMIETNIK
+https://inclusive-components.design/about-the-project/
+https://we.tl/t-shLSbSoLMu
+https://we.tl/t-vcbgVJuWPb
+https://www.youtube.com/watch?v=IV_z2Utc6HI - ciekawy mod do klocków
+https://preterhuman.net/ - database of over 750,000 text files on a variety of subjects.
+https://smee.io/iVpN8sNKRZNZwBj2 - end-point to hooks (garbage)
+https://www.buildandshoot.com/download/ - Ace of Spades but better :V
+https://www.oracle.com/a/tech/docs/8u391checksum.html - checksum for Java
+https://stackoverflow.com/questions/10268583/downloading-java-jdk-on-linux-via-wget-is-shown-license-page-instead
+http://ref.x86asm.net/coder32.html
+
+KAT CRYPTOGRAPHY(?)
+https://en.wikipedia.org/wiki/AVX-512
+https://www.felixcloutier.com/x86/vcvtne2ps2bf16),
+https://www.felixcloutier.com/x86/vcvtneps2bf16),
+https://www.felixcloutier.com/x86/vdpbf16ps)
+
+KAT NO KYC UTILS & CRYPTO
+https://temp-number.org/app/order/activation - sms gate
+https://kolabnow.com/settings - Mail service
+https://kycnot.me/ - no kyc exchanges or services
+https://monerica.com - list of services, that accept Monero as a payment method
+
+KAT DISTRO
+https://endeavouros.com - Linux OS
+https://unraid.net/ - NAS OS
+https://busybox.net/ - Window Manager
+http://www.6809.org.uk/evilwm/ - Window Manager
+
+KAT FOSS
+https://joinmastodon.org - foss social media something xd
+
+KAT VIDEOS
+https://www.youtube.com/watch?v=9wQnO-Katws
+https://www.youtube.com/@Femtanyl03/videos
+https://www.youtube.com/watch?v=puOkriFPVtQ
+https://www.youtube.com/watch?v=vXaWOJTCYNg
+https://www.youtube.com/watch?v=mHA0gmAIkKg
+https://www.youtube.com/watch?v=jyUCWq-wCDI
+https://www.youtube.com/watch?v=OONjbRAR-TM
+https://www.youtube.com/watch?v=7PAk1wsy3VI
+https://www.youtube.com/watch?v=P8accXNcwjs
+https://www.youtube.com/watch?v=7PAk1wsy3VI - OSINT Tutorial

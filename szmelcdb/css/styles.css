@@ -1,0 +1,89 @@
+body, html {
+    margin: 10;
+    padding: 10;
+    font-family: 'Courier New', monospace;
+    background-color: #000;
+    color: #0f0;
+    height: 100%;
+}
+
+#navbar {
+    display: absolute;
+    width: 100%;
+    background-color: #000;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.5);
+    z-index: 1000;
+}
+
+#navbar button {
+    background-color: #222;
+    border: 1px solid #0f0;
+    color: #0f0;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+#navbar button:hover {
+    background-color: #0f0;
+    color: #000;
+}
+
+#content {
+  margin-top: 30px; /* Reduced from 50px to 30px */
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+.hidden {
+    display: none;
+}
+
+#file-list-popup {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%; /* Adjust width of the popup */
+    max-height: 60vh; /* Adjust max height for viewport height */
+    overflow-y: auto;
+    background-color: #333; /* Darker background for the popup */
+    color: #0f0; /* Green text to match the theme */
+    border: 2px solid #0f0; /* Green border */
+    z-index: 1001; /* Above other content */
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px; /* Rounded corners for the popup */
+}
+
+.file-list-item {
+    padding: 10px;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #0f0; /* Green border for items */
+    color: #0f0;
+    text-decoration: none;
+    cursor: pointer; /* Cursor to indicate clickable items */
+}
+
+.file-list-item:hover {
+    background-color: #0f0; /* Green background on hover */
+    color: #000; /* Text color change on hover */
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+/* Media query for responsive adjustments */
+@media (max-width: 600px) {
+    #navbar button {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    #file-list-popup {
+        width: 90%; /* Full width on smaller screens */
+        max-height: 80vh; /* Larger max height on smaller screens */
+    }
+}
