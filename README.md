@@ -1,7 +1,7 @@
 # serainox420.github.io
 ### Half Empty Website
-### Now With [Database!] 
-serainox420.github.io/szmelcdb/szmelcdb
+### Now With
+[Database](serainox420.github.io/szmelcdb/szmelcdb)
 ### Index
 ![Projekt bez nazwy](https://github.com/serainox420/serainox420.github.io/assets/95081005/09fe9827-0477-4c71-b445-b55022d5f4c7)
 ### Database
