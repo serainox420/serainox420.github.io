@@ -1,4 +1,4 @@
-# serainox420.github.io
+# [Link](serainox420.github.io/)
 ### Half Empty Website
 ### Now With
 [Database](serainox420.github.io/szmelcdb/szmelcdb)
