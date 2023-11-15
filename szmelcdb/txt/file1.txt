@@ -1,9 +1,9 @@
-https://discord.com/channels/940431029037072416/1169419266316050514/1169439354695995403]
+https://discord.com/channels/940431029037072416/1169419266316050514/1169439354695995403
 
 https://en.wikipedia.org/wiki/AVX-512
-https://www.felixcloutier.com/x86/vcvtne2ps2bf16),
-https://www.felixcloutier.com/x86/vcvtneps2bf16),
-https://www.felixcloutier.com/x86/vdpbf16ps)
+https://www.felixcloutier.com/x86/vcvtne2ps2bf16
+https://www.felixcloutier.com/x86/vcvtneps2bf16
+https://www.felixcloutier.com/x86/vdpbf16ps
 https://joinmastodon.org
 
 https://www.exploit-db.com/shellcodes
