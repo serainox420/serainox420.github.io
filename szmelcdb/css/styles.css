@@ -8,7 +8,7 @@ body, html {
 }
 
 #navbar {
-    display: absolute;
+    position: absolute;
     width: 100%;
     background-color: #000;
     padding: 10px 0;
@@ -31,11 +31,10 @@ body, html {
 }
 
 #content {
-  margin-top: 30px; /* Reduced from 50px to 30px */
-  padding: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
-
+    margin-top: 30px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .hidden {
@@ -47,65 +46,69 @@ body, html {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 30%; /* Adjust width of the popup */
-    max-height: 60vh; /* Adjust max height for viewport height */
+    width: 30%;
+    max-height: 60vh;
     overflow-y: auto;
-    background-color: #333; /* Darker background for the popup */
-    color: #0f0; /* Green text to match the theme */
-    border: 2px solid #0f0; /* Green border */
-    z-index: 1001; /* Above other content */
+    background-color: #333;
+    color: #0f0;
+    border: 2px solid #0f0;
+    z-index: 1001;
     padding: 10px;
     box-sizing: border-box;
-    border-radius: 5px; /* Rounded corners for the popup */
+    border-radius: 5px;
 }
 
 .file-list-item {
     padding: 10px;
     display: block;
     text-align: center;
-    border-bottom: 1px solid #0f0; /* Green border for items */
+    border-bottom: 1px solid #0f0;
     color: #0f0;
     text-decoration: none;
-    cursor: pointer; /* Cursor to indicate clickable items */
+    cursor: pointer;
 }
 
 .file-list-item:hover {
-    background-color: #0f0; /* Green background on hover */
-    color: #000; /* Text color change on hover */
-    text-decoration: none; /* Ensure no underline on hover */
+    background-color: #0f0;
+    color: #000;
+    text-decoration: none;
 }
+
 .wrapper {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
 }
+
 iframe {
     width: 100%;
-    height: 80vh; /* 80% of the viewport height */
+    height: 80vh;
     border: none;
     background-color: white;
 }
-.url-text {
-    color: white;
-    text-align: center;
+
+.iframe-container {
+    margin-bottom: 20px;
+}
+
+.iframe-url {
+    color: #0f0;
     margin-top: 5px;
 }
 
 /* Responsive Design for Mobile Devices */
 @media (max-width: 600px) {
     iframe {
-        height: 50vh; /* Smaller height for mobile devices */
+        height: 50vh;
     }
-}
 
-/* Media query for responsive adjustments */
-@media (max-width: 600px) {
     #navbar button {
         padding: 5px;
         font-size: 12px;
     }
 
     #file-list-popup {
-        width: 90%; /* Full width on smaller screens */
-        max-height: 80vh; /* Larger max height on smaller screens */
+        width: 90%;
+        max-height: 80vh;
     }
 }
