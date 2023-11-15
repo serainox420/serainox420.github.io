@@ -44,7 +44,7 @@ function displayFileContent(fileName) {
 function createIframesFromContent(text) {
     return text.split('\n')
                .filter(line => line.trim() !== '')
-               .map(url => `<div class="wrapper" onclick="window.location.href='${url}';"><iframe src="${url}" sandbox="allow-top-navigation" style="pointer-events: none; scrolling="no"></iframe></div>`)
+               .map(url => `<div class="iframe-container"><iframe src="${url}" sandbox="allow-top-navigation" style="pointer-events: none;" scrolling="no" width="100%" height="400px"></iframe><p class="iframe-url">${url}</p></div>`)
                .join('');
 }
 
