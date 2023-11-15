@@ -74,6 +74,28 @@ body, html {
     color: #000; /* Text color change on hover */
     text-decoration: none; /* Ensure no underline on hover */
 }
+.wrapper {
+    width: 100%;
+    margin-bottom: 10px;
+}
+iframe {
+    width: 100%;
+    height: 80vh; /* 80% of the viewport height */
+    border: none;
+    background-color: white;
+}
+.url-text {
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 600px) {
+    iframe {
+        height: 50vh; /* Smaller height for mobile devices */
+    }
+}
 
 /* Media query for responsive adjustments */
 @media (max-width: 600px) {
