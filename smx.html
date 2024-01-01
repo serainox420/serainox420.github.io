@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SMX-OS</title>
+    
+    <link rel="stylesheet" href="https://serainox420.github.io/styles.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://serainox420.github.io/js/snowfall.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(document).snowfall({
+          flakeCount : 100,
+          maxSpeed : 9,
+          maxSize : 9
+        });
+      });
+    </script>
+    
+    <style>
+      body {
+        background-color: #000000;
+        color: #fff;
+        font-family: Ancient;
+        margin: 20;
+      }
+      .title {
+        font-size: 150px;
+        text-align: center;
+        padding 0px 0px;
+        height: 49px;
+        position: fixed;
+        top: -30px;
+        width: 100%;
+      }
+      .header {
+        font-size: 30px;
+        text-align: center;
+        position: fixed;
+        top: 250px;
+        width: 100%;
+      }
+      main {
+        padding: 20px;
+        margin-top: 20px;
+      }
+      .next-button {
+        text-align: center;
+        margin-top: 330px;
+      }
+      .next-link {
+        background-color: #000000;
+        color: #00FF00;
+        padding: 2px 2px;
+        text-decoration: none;
+        font-size: 40px;
+        border-radius: 5px;
+      }
+      .next-link:hover {
+        background-color: #005500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">
+      <p>$mx os</p>
+    </div>
+    <div class="header">
+      <p>Linux based operating system</p>
+    </div>
+    <div class="next-button">
+      <a href="https://www.google.com" target="_blank" class="next-link">[next]</a>
+    </div>
+    <main>
+      <!-- main goes here -->
+    </main>
+    <script>
+      setInterval(() => {
+        const elements = document.querySelectorAll("body, footer");
+        for (const el of elements) {
+          el.style.color = getRandomColor();
+        }
+      }, 200);
+      function getRandomColor() {
+        const letters = "0123456789ABCDEF";
+        let green = Math.floor(Math.random() * 7) + 255 + 100 + 100;
+        let color = "#" + green.toString(14).padStart(2, "0").repeat(2);
+        return color;
+      }
+    </script>
+  </body>
+</html>
