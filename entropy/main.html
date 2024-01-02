@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Entropy OS</title> <!-- Updated title -->
+
+    <link rel="stylesheet" href="https://serainox420.github.io/styles.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://serainox420.github.io/js/snowfall.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(document).snowfall({
+          flakeCount : 100,
+          maxSpeed : 9,
+          maxSize : 4
+        });
+      });
+    </script>
+    
+    <style>
+      html, body {
+          height: 100%;
+          margin: 0;
+          background-color: #000000;
+          color: #fff;
+          font-family: Ancient; /* Updated font family */
+      }
+      body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+      header {
+          text-align: center;
+          height: 256px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 150px; /* Updated font size */
+      }
+      main {
+          padding: 20px;
+          flex-grow: 1;
+          width: 100%;
+          max-width: 320;
+      }
+      footer {
+          background-color: #000;
+          color: #fff;
+          padding: 1px;
+          text-align: center;
+          font-weight: bold;
+          font-size: 20px;
+      }
+      .navbar {
+          background-color: #00000;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          padding: 5px 5px;
+          font-weight: bold;
+          font-family: Arial;
+          font-size: 30px;
+      }
+      .head {
+        font-size: 30px;
+        text-align: center;
+        position: fixed;
+        top: 169px;
+        width: 100%;
+      }
+      /* ... (rest of the original CSS) */
+    </style>
+  </head>
+  <body>
+    <header>Entropy</header>
+    <main>
+      <div class="head">
+      <p>Operating system</p>
+    </div>
+      <div class="navbar">
+        <a href="https://serainox420.github.io/entropy/download">Download</a>
+      </div>
+      <div class="navbar">
+        <a href="https://github.com/entropy/screenshots">Screenshots</a>
+      </div>
+      <div class="navbar">
+        <a href="https://serainox420.github.io/entropy/about">About</a>
+      </div>
+      <div class="navbar">
+        <a href="https://discord.gg/y9h7FjVsX6">Discord</a>
+      </div>
+      <div class="navbar">
+        <a href="https://github.com/GNU-Szmelc">GitHub</a>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 Szmelc Incorporated</p>
+    </footer>
+    <script>
+      setInterval(() => {
+        const elements = document.querySelectorAll("*");
+        for (const el of elements) {
+          el.style.color = getRandomColor();
+        }
+      }, 200);
+
+      function getRandomColor() {
+        const letters = "0123456789ABCDEF";
+        let green = Math.floor(Math.random() * 7) + 255 + 100 + 100; // generates a random value between 128 and 255 for green channel
+        let color = "#" + green.toString(14).padStart(2, "0").repeat(2);
+        return color;
+      }
+    </script>
+  </body>
+</html>
