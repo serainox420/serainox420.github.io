@@ -3,24 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Placeholder Title</title>
-<script>
-  function setTitleFromURL() {
-    const params = new URLSearchParams(window.location.search);
-    const titleText = params.get('text'); // Get the "text" parameter from the URL
-    if (titleText) {
-      document.title = titleText; // Set the document title to the "text" parameter value
-    }
+<title>Text Animation with Custom Font</title>
+<link rel="stylesheet" href="https://serainox420.github.io/styles.css">
+<style>
+  @font-face {
+    font-family: 'Ancient';
+    src: url('https://github.com/serainox420/serainox420.github.io/blob/personal/fonts/Ancient.ttf') format('truetype'); /* Adjust the URL to where your font is hosted */
   }
-</script>
+  #animated-text {
+    font-size: 24px;
+    font-family: 'Ancient', Arial, sans-serif;
+  }
+  .letter {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  .visible {
+    opacity: 1 !important;
+  }
+</style>
 </head>
-<body onload="setTitleFromURL();">
+<body>
 
 <div id="animated-text"></div>
 
 <script>
-  // Original script to animate text
-  const text = new URLSearchParams(window.location.search).get('text') || 'Default Text'; // Use URL parameter or default
+  // Function to get URL parameters
+  function getURLParameter(name) {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20')) || null;
+  }
+
+  let text = getURLParameter('text'); // Get the 'text' parameter from URL
+  if (!text) {
+    text = 'Hello, World!'; // Default text if no parameter is provided
+  }
   let index = 0; // Starting index of the text
 
   function setupText() {
@@ -45,9 +61,9 @@
     }
     index++;
     if(index >= letters.length) {
-      index = 0;
+      index = 0; // Reset index to loop the animation
     }
-    setTimeout(displayText, 1000); // Adjust time as necessary for typewriter speed
+    setTimeout(displayText, 1000); // Set the timeout for the next letter
   }
 
   setupText();
