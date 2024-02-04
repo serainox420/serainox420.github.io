@@ -1,0 +1,42 @@
+<script>
+  // Function to parse query parameters
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  // Get the 'text' query parameter
+  const textFromURL = getQueryParam('text') || 'Hello, World!'; // Fallback to 'Hello, World!' if no parameter is provided
+
+  let index = 0; // Starting index of the text
+
+  function setupText(text) {
+    const container = document.getElementById('animated-text');
+    container.innerHTML = ''; // Clear previous content
+    // Split text into letters and wrap each letter in a span
+    text.split('').forEach((char) => {
+      const span = document.createElement('span');
+      span.textContent = char;
+      span.className = 'letter';
+      container.appendChild(span);
+    });
+  }
+
+  function displayText() {
+    const letters = document.querySelectorAll('#animated-text .letter');
+    // Reset all letters to transparent
+    letters.forEach(letter => letter.classList.remove('visible'));
+    // Make the current letter visible
+    if(letters[index]) {
+      letters[index].classList.add('visible');
+    }
+    index++;
+    if(index >= letters.length) {
+      index = 0;
+    }
+    setTimeout(displayText, 1000); // Adjust timing as needed
+  }
+
+  setupText(textFromURL);
+  displayText();
+</script>
