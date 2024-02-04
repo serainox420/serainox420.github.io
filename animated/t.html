@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Placeholder Title</title>
+<script>
+  function setTitleFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    const titleText = params.get('text'); // Get the "text" parameter from the URL
+    if (titleText) {
+      document.title = titleText; // Set the document title to the "text" parameter value
+    }
+  }
+</script>
+</head>
+<body onload="setTitleFromURL();">
+
+<div id="animated-text"></div>
+
+<script>
+  // Original script to animate text
+  const text = new URLSearchParams(window.location.search).get('text') || 'Default Text'; // Use URL parameter or default
+  let index = 0; // Starting index of the text
+
+  function setupText() {
+    const container = document.getElementById('animated-text');
+    container.innerHTML = ''; // Clear previous content
+    // Split text into letters and wrap each letter in a span
+    text.split('').forEach((char) => {
+      const span = document.createElement('span');
+      span.textContent = char;
+      span.className = 'letter';
+      container.appendChild(span);
+    });
+  }
+
+  function displayText() {
+    const letters = document.querySelectorAll('#animated-text .letter');
+    // Reset all letters to transparent
+    letters.forEach(letter => letter.classList.remove('visible'));
+    // Make the current letter visible
+    if(letters[index]) {
+      letters[index].classList.add('visible');
+    }
+    index++;
+    if(index >= letters.length) {
+      index = 0;
+    }
+    setTimeout(displayText, 1000); // Adjust time as necessary for typewriter speed
+  }
+
+  setupText();
+  displayText();
+</script>
+
+</body>
+</html>
