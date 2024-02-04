@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Animation with Custom Font</title>
+<link rel="stylesheet" href="https://serainox420.github.io/styles.css">
+<style>
+  @font-face {
+    font-family: 'Ancient';
+    src: url('https://github.com/serainox420/serainox420.github.io/blob/personal/fonts/Ancient.ttf') format('truetype'); /* Adjust the URL to where your font is hosted */
+  }
+  #animated-text {
+    font-size: 24px;
+    font-family: 'Ancient', Arial, sans-serif;
+  }
+  .letter {
+    opacity: 0;
+    transition: opacity 1s ease;
+    animation: colorFlash 0.5s infinite; /* Flashing effect duration */
+  }
+  .visible {
+    opacity: 1 !important;
+  }
+  @keyframes colorFlash {
+    0% { color: green; }
+    50% { color: cyan; }
+    100% { color: green; }
+  }
+</style>
+</head>
+<body>
+
+<div id="animated-text"></div>
+
+<script>
+  // Function to get URL parameters
+  function getURLParameter(name) {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20')) || null;
+  }
+
+  let text = getURLParameter('text'); // Get the 'text' parameter from URL
+  if (!text) {
+    text = 'Hello, World!'; // Default text if no parameter is provided
+  }
+  let index = 0; // Starting index of the text
+
+  function setupText() {
+    const container = document.getElementById('animated-text');
+    container.innerHTML = ''; // Clear previous content
+    // Split text into letters and wrap each letter in a span
+    text.split('').forEach((char) => {
+      const span = document.createElement('span');
+      span.textContent = char;
+      span.className = 'letter';
+      container.appendChild(span);
+    });
+  }
+
+  function displayText() {
+    const letters = document.querySelectorAll('#animated-text .letter');
+    // Reset all letters to transparent
+    letters.forEach(letter => letter.classList.remove('visible'));
+    // Make the current letter visible
+    if(letters[index]) {
+      letters[index].classList.add('visible');
+    }
+    index++;
+    if(index >= letters.length) {
+      index = 0; // Reset index to loop the animation
+    }
+    setTimeout(displayText, 1000); // Set the timeout for the next letter
+  }
+
+  setupText();
+  displayText();
+</script>
+
+</body>
+</html>
