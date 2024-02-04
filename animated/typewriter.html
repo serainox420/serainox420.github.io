@@ -8,7 +8,7 @@
 <style>
   @font-face {
     font-family: 'Ancient';
-    src: url('https://cdn.jsdelivr.net/gh/serainox420/serainox420.github.io/fonts/Ancient.ttf') format('truetype');
+    src: url('https://github.com/serainox420/serainox420.github.io/blob/personal/fonts/Ancient.ttf') format('truetype'); /* Adjust the URL to where your font is hosted */
   }
   #animated-text {
     font-size: 24px;
@@ -29,23 +29,14 @@
 
 <script>
   // Function to get URL parameters
-  function getUrlParam(parameter, defaultvalue){
-    let urlparameter = defaultvalue;
-    if(window.location.href.indexOf(parameter) > -1){
-        urlparameter = getUrlVars()[parameter];
-        }
-    return urlparameter;
-  }
-  function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-        vars[key] = value;
-    });
-    return vars;
+  function getURLParameter(name) {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20')) || null;
   }
 
-  // Use 'Hello, World!' as a fallback if no word parameter is provided
-  const text = getUrlParam('word','Hello, World!');
+  let text = getURLParameter('text'); // Get the 'text' parameter from URL
+  if (!text) {
+    text = 'Hello, World!'; // Default text if no parameter is provided
+  }
   let index = 0; // Starting index of the text
 
   function setupText() {
@@ -72,7 +63,7 @@
     if(index >= letters.length) {
       index = 0; // Reset index to loop the animation
     }
-    setTimeout(displayText, 1000); // Adjust the timing as necessary
+    setTimeout(displayText, 1000); // Set the timeout for the next letter
   }
 
   setupText();
