@@ -1,16 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Animation with Custom Font</title>
+<link rel="stylesheet" href="https://serainox420.github.io/styles.css">
+<style>
+  @font-face {
+    font-family: 'Ancient';
+    src: url('https://cdn.jsdelivr.net/gh/serainox420/serainox420.github.io/fonts/Ancient.ttf') format('truetype');
+  }
+  #animated-text {
+    font-size: 24px;
+    font-family: 'Ancient', Arial, sans-serif;
+  }
+  .letter {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  .visible {
+    opacity: 1 !important;
+  }
+</style>
+</head>
+<body>
+
+<div id="animated-text"></div>
+
 <script>
-  // Function to parse query parameters
-  function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
+  // Function to get URL parameters
+  function getUrlParam(parameter, defaultvalue){
+    let urlparameter = defaultvalue;
+    if(window.location.href.indexOf(parameter) > -1){
+        urlparameter = getUrlVars()[parameter];
+        }
+    return urlparameter;
+  }
+  function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
   }
 
-  // Get the 'text' query parameter
-  const textFromURL = getQueryParam('text') || 'Hello, World!'; // Fallback to 'Hello, World!' if no parameter is provided
-
+  // Use 'Hello, World!' as a fallback if no word parameter is provided
+  const text = getUrlParam('word','Hello, World!');
   let index = 0; // Starting index of the text
 
-  function setupText(text) {
+  function setupText() {
     const container = document.getElementById('animated-text');
     container.innerHTML = ''; // Clear previous content
     // Split text into letters and wrap each letter in a span
@@ -32,11 +70,14 @@
     }
     index++;
     if(index >= letters.length) {
-      index = 0;
+      index = 0; // Reset index to loop the animation
     }
-    setTimeout(displayText, 1000); // Adjust timing as needed
+    setTimeout(displayText, 1000); // Adjust the timing as necessary
   }
 
-  setupText(textFromURL);
+  setupText();
   displayText();
 </script>
+
+</body>
+</html>
